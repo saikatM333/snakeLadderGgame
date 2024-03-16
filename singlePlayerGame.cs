@@ -23,7 +23,7 @@ namespace SnakeAndLadderGame
         {
             // roll the dice and it will give the value between 1 - 6
             Random r = new Random();
-
+            int roll = r.Next(1, 7);
 
             int position = 0;
             int positionStatus = 0;
@@ -31,7 +31,7 @@ namespace SnakeAndLadderGame
             Boolean gameStatus = true;
             while (gameStatus)
             {
-                int roll = r.Next(1, 7);
+
 
                 position = position + roll;
                 // it will call the function to decide noplay, snale , ladder 
@@ -47,7 +47,6 @@ namespace SnakeAndLadderGame
                     gameStatus = false;
                     break;
                 }
-                
                 // this will ensure that position will not go above 100
                 if (position > 100)
                 {
@@ -57,7 +56,7 @@ namespace SnakeAndLadderGame
                 numberOfTimesDieRolled++;
                 Console.WriteLine($"the position of {this.name} is {position}");
             }
-            
+            Console.WriteLine($"the number of time die rolled is {numberOfTimesDieRolled}");
         }
         public int decidingtheStatus(int position)
         {
@@ -108,6 +107,7 @@ namespace SnakeAndLadderGame
             Random r = new Random();
             return r.Next(0, 13);
         }
+
 
     }
 
