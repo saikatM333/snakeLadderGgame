@@ -19,6 +19,22 @@ namespace SnakeAndLadderGame
 
         }
 
-       
+        public void playingTheGame()
+        {
+            // roll the dice and it will give the value between 1 - 6
+            Random r = new Random();
+
+
+            int position = 0;
+            int positionStatus = 0;
+            int numberOfTimesDieRolled = 0;
+            Boolean gameStatus = true;
+            while (gameStatus)
+            {
+                int roll = r.Next(1, 7);
+
+
+            }
+        }
     }
 }
