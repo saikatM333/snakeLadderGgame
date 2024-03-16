@@ -40,7 +40,15 @@ namespace SnakeAndLadderGame
                     position = decidingtheStatus(position);
 
                 }
-// this will ensure that position will not go above 100
+                //it will ensure that player win only when position is 100
+                if (position == 100)
+                {
+                    Console.WriteLine($"{this.name}  win the game ");
+                    gameStatus = false;
+                    break;
+                }
+                
+                // this will ensure that position will not go above 100
                 if (position > 100)
                 {
                     position = position - roll;
